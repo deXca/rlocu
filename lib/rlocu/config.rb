@@ -3,10 +3,9 @@ module Rlocu
   
   class << self
 
-    def config!(file=File.expand_path("../../../.config", __FILE__))
-      configs = YAML::load(File.open(file))
-      @api_key = configs['API_KEY']  
-      @http_base = configs['HTTP_BASE']  
+    def config!
+      @api_key = Rails.application.secrets.locu_api_key
+      @http_base = 'https://api.locu.com/v1_0/'
     end
 
     def api_key
