@@ -1,5 +1,5 @@
 require 'open-uri'
-require 'JSON'
+require 'json'
 
 module Rlocu
   module VenueSearch
