@@ -4,7 +4,7 @@ module Rlocu
   class << self
 
     def config!
-      @api_key = <%= ENV["LOCU_API_KEY"] %>
+      @api_key = ENV["LOCU_API_KEY"]
       @http_base = 'https://api.locu.com/v1_0/'
     end
 
