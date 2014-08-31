@@ -3,8 +3,8 @@ module Rlocu
   
   class << self
 
-    def config!
-      @api_key = Rails.application.secrets.locu_api_key
+    def config!(api_key)
+      @api_key = api_key
       @http_base = 'https://api.locu.com/v1_0/'
     end
 
@@ -17,6 +17,5 @@ module Rlocu
     end
 
   end
-
-  config!
+  
 end
